@@ -1,0 +1,76 @@
+﻿@model FinalPro.Models.Schedule
+
+@{
+    ViewData["Title"] = "Schedule";
+}
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+<center><h4>Schedule</h4></center>
+<h1></h1>
+<hr />
+<head>
+    <style>
+     
+
+        mark {
+            background-color: aliceblue;
+            color: Black;
+        }
+    </style>
+</head>
+<body style="background-image: url('https://previews.123rf.com/images/serazetdinov/serazetdinov1109/serazetdinov110900012/10436050-brillait-multicolores-tasses-sur-un-fond-de-couleur.jpg') ">
+</body>
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="SchedAD" asp-controller="Home" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <mark><label asp-for="PatientID" class="control-label"></label></mark>
+                    <input asp-for="PatientID" class="form-control" />
+                    <span asp-validation-for="PatientID" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <mark>  <label asp-for="Specialization" class="control-label"></label></mark>
+                    <input asp-for="Specialization" class="form-control" />
+                    <span asp-validation-for="Specialization" class="text-danger"></span>
+                </div>
+                <div>
+                     <mark>DOCTORS:</mark>
+                     <select name="DOCTOR">
+                         <option value="None">None</option>
+                         <option value="Mugesh S">Mugesh S[General]</option>
+                         <option value="Siddharth venkat">Siddharth Venkat[Internal Medicine]</option>
+                         <option value="GIRI DHARAN">Giri Dharan[Pediatrics]</option>
+                         <option value="Adeshwar kannan">Adeshwar Kannan[Orthopedics]</option>
+                         <option value="Santhosh K">Santhosh K[Ophthalmology]</option>
+
+                     </select>
+                </div>
+                <br/>
+                <br/>
+                <div class="form-group">
+                    <mark> <label asp-for="VisitDate" class="control-label"></label></mark>
+                    <input asp-for="VisitDate" class="form-control" />
+                    <span asp-validation-for="VisitDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <mark><label asp-for="AppointmentTime" class="control-label"></label></mark>
+                    <input asp-for="AppointmentTime" class="form-control" />
+                    <span asp-validation-for="AppointmentTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<div>
+    <a asp-action="Index">LOGOUT</a>
+</div>
+

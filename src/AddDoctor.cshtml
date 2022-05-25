@@ -1,0 +1,87 @@
+﻿@model FinalPro.Models.AddDoctor
+
+@{
+    ViewData["Title"] = "AddDoctor";
+}
+
+    <head>
+        <style>
+            mark1 {
+                background-color: blueviolet;
+                color: Black;
+            }
+
+            mark2 {
+                background-color: chartreuse;
+            }
+        </style>
+    </head>
+<center><h1>ADD DOCTOR</h1></center>
+
+<body style="background-image: url('https://st.depositphotos.com/1907633/2184/i/600/depositphotos_21841631-stock-photo-success-smart-medical-doctor-with.jpg');background-repeat:no-repeat;background-size:100% 100%">
+</body>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DoctorAD" asp-controller="Home" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+
+                <mark><b><label asp-for="FirstName" class="control-label"></label></b></mark>
+                <input asp-for="FirstName" class="form-control" required />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <mark><b><label asp-for="LastName" class="control-label"></label></b></mark>
+                <input asp-for="LastName" class="form-control" required />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <mark>
+                    <b> <label asp-for="Sex" class="control-label"></label></b>
+                </mark>
+                <input asp-for="Sex" class="form-control" required />
+                <span asp-validation-for="Sex" class="text-danger"></span>
+            </div>
+            <div>
+                <mark> <b>Specialization:</b></mark>
+                <select name="Specialization">
+                    <option value="None">None</option>
+                    <option value="General">General</option>
+                    <option value="Internal Medicine">Internal Medicine</option>
+                    <option value=" Pediatrics"> Pediatrics</option>
+                    <option value=" Orthopedics"> Orthopedics</option>
+                    <option value="Ophthalmology">Ophthalmology</option>
+                </select>
+            </div><br />
+
+            <div>
+                <mark> <b>VisitingHours:</b></mark>
+                <select name="VisitingHours">
+                    <option value="None">None</option>
+                    <option value="10-11AM">10-11AM</option>
+                    <option value="1-3PM">1-3PM</option>
+                    <option value="5-8PM">5-8PM</option>
+
+                </select>
+            </div>
+
+            <br />
+            <br />
+
+            <div>
+                <input type="submit" value="Create" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Index">LOGOUT</a>
+</div>
+
+
+
+

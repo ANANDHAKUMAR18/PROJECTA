@@ -1,0 +1,151 @@
+﻿@model FinalPro.Models.Login
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<center>
+    <img src="~/images/stone.jpg" height="100" width="100" />
+</center>
+
+<br />
+<br />
+<body style="background-image: url('https://us.123rf.com/450wm/lenetstan/lenetstan1908/lenetstan190800444/129050693-medical-equipment-blue-stethoscope-and-tablet-on-white-background-medical-equipment.jpg?ver=6');background-repeat:no-repeat;background-size:100%100% ">
+</body>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Login Page </title>
+    <style>
+        Body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: pink;
+        }
+
+        button {
+            background-color: #4CAF50;
+            width: 100%;
+            color: orange;
+            padding: 15px;
+            margin: 10px 0px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            margin: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <table border="1">
+            @using (Html.BeginForm("Validate", "Home", FormMethod.Post))
+            {
+                <tr>
+                    <td>
+
+                        <mark>Username : </mark>
+                        <input type="text" placeholder="Enter Username" asp-for="UserName" required />
+                        <span asp-validation-for="UserName" style="color:blue"></span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mark>Password : </mark>
+                        <input type="password" placeholder="Enter Password" asp-for="Password" required>
+                        <span asp-validation-for="Password" style="color:red"></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="form-group">
+                        <center> <input type="submit" value="LOGIN" class="btn btn-primary" /></center>
+                    </td>
+
+
+                </tr>
+
+            }
+
+
+        </table>
+    </center>
+
+</body>
+</html>
+
+@*<center>
+
+
+    <table border="3" cellpadding="10" cellspacing="10">
+
+
+        @using (Html.BeginForm("Validate", "Home", FormMethod.Post))
+        {
+
+        <tr>
+            <td>
+                <b> Username:</b> <input type="Text" name="Username" style="border:2px dotted #00f;display:block;background:white" required />
+            </td>
+        </tr>
+
+
+
+
+
+
+
+        <tr>
+            <td><b> Password:</b> <input type="password" name="Password" style="border:2px dotted #00f;display:block;background:White" required /></td>
+        </tr>
+        <tr>
+            <td >
+                <input type="submit" value="Login"  />
+            </td>
+
+        </tr>
+        }
+
+
+
+
+
+
+
+        </table>
+    </center>*@
+
+
+
+
+
+

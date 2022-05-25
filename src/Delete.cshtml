@@ -1,0 +1,36 @@
+﻿@model FinalPro.Models.Schedule
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<body style="background-image: url('https://cdn4.vectorstock.com/i/1000x1000/91/48/empty-hospital-ward-background-clinic-room-vector-20599148.jpg'); background-repeat: no-repeat; background-size: 100% 100%">
+</body>
+    <table class="table">
+        @using (Html.BeginForm("Deletee", "Home", FormMethod.Post))
+        {
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Patient ID")
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.EditorFor(modelItem => Model.PatientID)
+                    </td>
+
+                    @*@using (Html.BeginForm("Home", "Home", FormMethod.Post))*@
+
+                    @*<label>If you are not existing Customer :) ==></label> <input type="submit" value="CREATE" />*@
+                    <th>Are you Sure want to cancel This Appointment :</th>
+
+                    <td>
+                        <input type="submit" value="Yes" class="alert-heading" />
+                    </td>
+
+            </tbody>
+}
+    </table>
